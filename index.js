@@ -33,22 +33,50 @@ const questions = [
   {
     type: "input",
     name: "installation",
-    message: "How to install this project",
+    message: "How do you install this project?",
+    validate: (value) => {
+      if (value) {
+        return true;
+      } else {
+        return "oop. enter a value to continue";
+      }
+    },
   },
   {
     type: "input",
     name: "usage",
-    message: "How to use this project",
+    message: "How do you use this project? Please enter instructions/examples",
+    validate: (value) => {
+      if (value) {
+        return true;
+      } else {
+        return "oop. enter a value to continue";
+      }
+    },
   },
   {
     type: "input",
-    name: "github",
-    message: "Enter your GitHub Username",
+    name: "collaborators",
+    message: "Enter any and all collaborators",
+    validate: (value) => {
+      if (value) {
+        return true;
+      } else {
+        return "oop. enter a value to continue";
+      }
+    },
   },
   {
     type: "input",
-    name: "email",
-    message: "Enter your email address",
+    name: "info",
+    message: "Enter your GitHub and email address",
+    validate: (value) => {
+      if (value) {
+        return true;
+      } else {
+        return "oop. enter a value to continue";
+      }
+    },
   },
   {
     type: "input",
@@ -58,15 +86,19 @@ const questions = [
   {
     type: "list",
     name: "license",
-    message: "What is the license this project should have?",
+    message: "What license should this project have?",
     choices: [
+      "EPL 1.0",
+      "BSD 2",
+      "GNU v3",
+      "Mozilla",
       "MIT",
       "agpl-3.0",
       "gpl",
       "gpl-2.0",
       "gpl-3.0",
       "APACHE-2.0",
-      "none",
+      "none of these",
     ],
   },
   {
