@@ -68,8 +68,20 @@ const questions = [
   },
   {
     type: "input",
-    name: "info",
-    message: "Enter your GitHub username and email address",
+    name: "github",
+    message: "Enter your GitHub username",
+    validate: (value) => {
+      if (value) {
+        return true;
+      } else {
+        return "oop. enter a value to continue";
+      }
+    },
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "Enter your email address",
     validate: (value) => {
       if (value) {
         return true;
