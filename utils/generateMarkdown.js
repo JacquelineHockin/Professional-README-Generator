@@ -30,7 +30,25 @@ function renderLicenseBadge(license) {
 
 // function that returns the license link
 // If there is no license, returns an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  let licenseLink = "";
+  if (license === "Apache 2.0") {
+    licenseLink = "https://www.apache.org/licenses/LICENSE-2.0";
+  } else if (license === "Mozilla ") {
+    licenseLink = "https://www.mozilla.org/en-US/MPL/";
+  } else if (license === "BSD 2") {
+    licenseLink = "https://opensource.org/licenses/BSD-2-Clause";
+  } else if (license === "EPL 1.0") {
+    licenseLink = "https://www.eclipse.org/legal/epl-v10.html";
+  } else if (license === "GNU v3") {
+    licenseLink = "https://www.gnu.org/licenses/gpl-3.0.en.html";
+  } else if (license === "MIT") {
+    licenseLink = "https://choosealicense.com/licenses/mit/";
+  } else {
+    licenseLink = "";
+  }
+  return licenseLink;
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
