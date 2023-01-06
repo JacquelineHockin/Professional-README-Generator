@@ -69,7 +69,7 @@ const questions = [
   {
     type: "input",
     name: "info",
-    message: "Enter your GitHub and email address",
+    message: "Enter your GitHub username and email address",
     validate: (value) => {
       if (value) {
         return true;
@@ -81,7 +81,14 @@ const questions = [
   {
     type: "input",
     name: "contributing",
-    message: "How to contribute to this project",
+    message: "How can one contribute to this project?",
+    validate: (value) => {
+      if (value) {
+        return true;
+      } else {
+        return "oop. enter a value to continue";
+      }
+    },
   },
   {
     type: "list",
@@ -100,11 +107,25 @@ const questions = [
       "APACHE-2.0",
       "none of these",
     ],
+    validate: (value) => {
+      if (value) {
+        return true;
+      } else {
+        return "oop. enter a value to continue";
+      }
+    },
   },
   {
     type: "input",
     name: "test",
-    message: "How to run the test for this project",
+    message: "How do you run the test for this project?",
+    validate: (value) => {
+      if (value) {
+        return true;
+      } else {
+        return "oop. enter a value to continue";
+      }
+    },
   },
 ];
 
