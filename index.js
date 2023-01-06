@@ -129,24 +129,24 @@ const questions = [
   },
 ];
 
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-//   return fs.writeFileSync(path.join("__dirname", "fileName"), data);
-// }
+// function to write README file
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, function (err) {
+    console.log(fileName);
+    console.log(data);
+    if (err) {
+      return console.log(err);
+    } else {
+      console.log("niice!");
+    }
+  });
+}
 
-// TODO: Create a function to initialize app
+// function to initialize app
 function init() {
-  //call the inquierer prompt to get to know about the user's project
-  inquirer.prompt(questions).then((answers) => {
-    console.log("answers = ", answers);
-    //use the user's answers to create readme template string by calling generateMarkDown
-    const markDownContent = generateMarkdown(answers);
-    //write the readme template string into a file
-    fs.writeFile("generatedReadMe.md", markDownContent, (err) =>
-      err
-        ? console.log(err)
-        : console.log("Successfully created generatedReadMe.md!")
-    );
+  inquirer.prompt(questions).then(function (data) {
+    writeToFile("README.md", generateMarkdown(data));
+    console.log(data);
   });
 }
 
