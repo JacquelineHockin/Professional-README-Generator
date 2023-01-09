@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a node application for creating a personalized README file that uses the user's input from generated prompts that correlate with specific sections in a pre-set "table of contents". The user is also given a list of licenses to choose from so that the README file will have it's respective license badge and link.
+This is a node application for a professional README generator that uses generated prompts and user input per section of a pre-set "table-of contents". An array of licenses are provided to the user to choose from so that the README file may display it's respective license badge and link.
 
 ### Links
 
