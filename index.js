@@ -112,11 +112,7 @@ const questions = [
       "GNU v3",
       "Mozilla",
       "MIT",
-      "agpl-3.0",
-      "gpl",
-      "gpl-2.0",
-      "gpl-3.0",
-      "APACHE-2.0",
+      "Apache 2.0",
       "none of these",
     ],
     validate: (value) => {
