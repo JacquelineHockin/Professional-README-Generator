@@ -11,7 +11,7 @@ Link to Example README is [here](./sample_README/README.md)
 
 #### Screenshots
 
-![Screenshot of Sample README on Github]()
-![Screenshot of Sample README on Github]()
+![Screenshot of Sample README on Github](./img-vid/sample_README_github1.png)
+![Screenshot of Sample README on Github](./img-vid/sample_README_github2.png)
 ![Screenshot of Sample README on VS code](./img-vid/sample_README1.png)
 ![Screenshot of Sample README on VS code](./img-vid/sample_README2.png)
